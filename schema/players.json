@@ -1,0 +1,74 @@
+/*
+	need to figure out what week it is,
+	create the next week's hash if Sunday/Monday
+
+	then find the matchup and team that uses the player
+	and update those numbers
+ */
+
+{
+	"id": "player-1",
+	"name": "Karl Malone",
+	"owner": "team-1", // gets updated once in a while
+	"totals": {
+		// calculated every game day
+		"pts": 1890,
+		"fga": 1489,
+		"fgm": 1180,
+		"fta": 780,
+		"ftm": 367,
+		"3pa": 67,
+		"3pm": 40,
+		"reb": 200,
+		"ast": 300,
+		"stl": 120,
+		"blk": 10,
+		"tos": 45
+	},
+	"stats": {
+		"week-1": {
+			"totals": {
+				// weekly totals, updated every game day of that week
+				"pts": 128,
+				"fga": 234,
+				"fgm": 117,
+				"fta": 178,
+				"ftm": 136,
+				"3pa": 86,
+				"3pm": 40,
+				"reb": 120,
+				"ast": 60,
+				"stl": 32,
+				"blk": 20,
+				"tos": 34
+			},
+			"game_log": [
+				{
+					// full game log for the week
+				}
+			]
+		},
+		"week-2": {
+			"totals": {
+				// weekly totals
+				"pts": 12890,
+				"fga": 23489,
+				"fgm": 11780,
+				"fta": 1780,
+				"ftm": 1367,
+				"3pa": 867,
+				"3pm": 403,
+				"reb": 1200,
+				"ast": 600,
+				"stl": 320,
+				"blk": 201,
+				"tos": 345
+			},
+			"game_log": [
+				{
+					// full game log for the week
+				}
+			]
+		}
+	}
+}

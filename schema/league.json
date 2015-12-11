@@ -1,0 +1,63 @@
+/*
+	/league/:id?team=id
+	decorate with player and matchup objects
+
+	/league/:id
+	return array of teams as is
+ */
+{
+	"id": "league-1",
+	"name": "My League",
+	"teams": [
+		{
+			"id": "team-1",
+			// wins, losses, ties updated on Sunday/Monday
+			"wins": 50,
+			"losses": 20,
+			"ties": 2,
+			"totals": {
+				// season totals, gets updated every game day,
+				// actually, maybe these only get updated every week?
+				"pts": 12890,
+				"fga": 23489,
+				"fgm": 11780,
+				"fta": 1780,
+				"ftm": 1367,
+				"3pa": 867,
+				"3pm": 403,
+				"reb": 1200,
+				"ast": 600,
+				"stl": 320,
+				"blk": 201,
+				"tos": 345
+			},
+			"players": [
+				// current players, linked entities
+				// decorate when team=id query param
+				"player-1",
+				"player-2",
+				"player-3",
+				"player-4",
+				"player-5",
+				"player-6",
+				"player-7",
+				"player-8",
+				"player-9",
+				"player-10"
+			],
+			"matchups": [
+				// linked entities, decorate when team=id query param
+				"matchup-1",
+				"matchup-2",
+				"matchup-3",
+				"matchup-4",
+				"matchup-5",
+				"matchup-6",
+				"matchup-7",
+				"matchup-8",
+				"matchup-9",
+				"matchup-10"
+			]
+		}
+	]
+}

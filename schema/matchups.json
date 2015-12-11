@@ -1,0 +1,84 @@
+/*
+	/matchup/:id
+	decorate with player objects
+
+	/matchups?league=id
+	return all as defined below
+
+	* potential issue:
+	if a player changes teams part way through
+	the week we'll add him to the player array
+	for that team, but when we decorate with player
+	objects all the totals for the week won't
+	match. We'll need to rely on the totals count
+	and be careful to update the totals with the
+	correct player's stats every game day
+
+	Every game day:
+	we loop through all players and add a random
+	game to the log of the current week. We update
+	the totals hash on that week's objects.
+
+	We figure out what week it is and find those matchups
+	then we loop through all players on each team and
+	add that day's stats to the totals hash.
+
+	If it's Sunday night/Monday morning we sum up all the
+	totals, calculate wins/losses/ties, initialize the
+	next week's matchup objects and add data and new
+	matchup id to each team object found from the league
+	endpoint.
+
+ */
+
+{
+	"id": "matchup-1",
+	"week": 1,
+	"teams": [
+		{
+			"name": "Team 1",
+			"totals": {
+				// team totals for the week,
+				// update every game day!
+				"pts": 12890,
+				"fga": 23489,
+				"fgm": 11780,
+				"fta": 1780,
+				"ftm": 1367,
+				"3pa": 867,
+				"3pm": 403,
+				"reb": 1200,
+				"ast": 600,
+				"stl": 320,
+				"blk": 201,
+				"tos": 345
+			},
+			"players": [
+				"player-1",
+				"player-2"
+			]
+		},
+		{
+			"name": "Team 2",
+			"totals": {
+				// team totals for the week
+				"pts": 12890,
+				"fga": 23489,
+				"fgm": 11780,
+				"fta": 1780,
+				"ftm": 1367,
+				"3pa": 867,
+				"3pm": 403,
+				"reb": 1200,
+				"ast": 600,
+				"stl": 320,
+				"blk": 201,
+				"tos": 345
+			},
+			"players": [
+				"player-1",
+				"player-2"
+			]
+		}
+	]
+}
